@@ -12,8 +12,8 @@ class UsersController < ApplicationController
   end
 
   def hui
-      @user = User.find(params[:id])
-      current_user.confirm_friend(@user)
-      redirect_to users_path, notice: 'U are now friends'
+    @user = User.find(params[:id])
+    current_user.confirm_friend(@user)
+    redirect_to users_path, notice: 'U are now friends'
   end
 end
