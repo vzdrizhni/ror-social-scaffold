@@ -1,0 +1,6 @@
+<% @pending_request.each do |p| %>
+  <% if @user == current_user %>
+    <%= p.name %>
+    <%= confirm_button(p) %>
+  <% end %>
+<% end %>

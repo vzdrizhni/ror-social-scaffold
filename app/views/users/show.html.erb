@@ -6,8 +6,5 @@
       <%= render @posts %>
     </ul>
   </article>
-  <% @pending_request.each do |p| %>
-    <%= p.name %>
-    <%= confirm_button(p) %>
-  <% end %>
+  <%= render 'users/pending'%>
 </section>

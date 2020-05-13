@@ -24,7 +24,7 @@ class User < ActiveRecord::Base
 
   # Users who have requested to be friends
   def friend_requests
-    inverse_friendships.map { |friendship| friendship.user unless friendship.confirmed }.compact
+    inverse_friendships.map { |friendship| friendship.user if !friendship.confirmed }.compact
   end
 
   def confirm_friend(user)

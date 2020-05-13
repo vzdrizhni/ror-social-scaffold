@@ -3,14 +3,19 @@ class Friendship < ApplicationRecord
   belongs_to :friend, class_name: 'User'
 
   validates_presence_of :user_id, :friend_id
-  validate :users_are_not_already_friends
+  validates_uniqueness_of :user, scope: :friend
+  # validate :duplicate_check
 
-  def users_are_not_already_friends
-    combinations = ["user_id = #{user_id} AND friend_id = #{friend_id}",
-    "user_id = #{friend_id} AND friend_id = #{user_id}"]
-    if Friendship.where(combinations.join(' OR ')).exists?
-      self.errors.add(:user_id, 'Already friends!')
-    end
-  end
+  # def disallow_self_friendship
+  #   if user_id == friend_id
+  #     errors.add(:friend_id, "Can't friend yourself")
+  #   end
+  # end
+
+  # def duplicate_check
+  #   if Friendship.where(user_id: friend_id, friend_id: user_id).exists? && Friendship.where(user_id: user_id, friend_id: friend_id).exists?
+  #     self.errors.add(:user_id, 'Already friends!')
+  #   end
+  # end
 
 end
