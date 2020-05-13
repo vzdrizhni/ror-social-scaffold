@@ -16,6 +16,7 @@
                           DELETE /users(.:format)                                                                         devise/registrations#destroy
                           POST   /users(.:format)                                                                         devise/registrations#create
          user_friendships GET    /users/:user_id/friendships(.:format)                                                    friendships#index
+                 hui_user PUT    /users/:id/hui(.:format)                                                                 users#hui
   request_friendship_user POST   /users/:id/request_friendship(.:format)                                                  friendships#create
             unfriend_user DELETE /users/:id/unfriend(.:format)                                                            friendships#destroy
                     users GET    /users(.:format)                                                                         users#index

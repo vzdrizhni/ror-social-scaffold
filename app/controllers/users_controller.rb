@@ -11,9 +11,9 @@ class UsersController < ApplicationController
     @pending_request = current_user.friend_requests
   end
 
-  #def pending_friendship(user)
-    #if current_user.pending_friends
-
-    #end
-  #end
+  def hui
+      @user = User.find(params[:id])
+      current_user.confirm_friend(@user)
+      redirect_to users_path, notice: 'U are now friends'
+  end
 end
