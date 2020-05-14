@@ -1,6 +1,6 @@
 <% @pending_request.each do |p| %>
   <% if @user == current_user %>
-    <%= p.name %>
+    <%= p.name %> wants to be your friend
     <%= confirm_button(p) %>
   <% end %>
 <% end %>
