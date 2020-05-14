@@ -74,6 +74,51 @@ a {
   flex-direction: column;
   align-items: center;
   padding: 16px;
+  position: relative;
+  .friends {
+    display: flex;
+    flex-flow: column;
+    align-self: flex-end;
+    position: absolute;
+    top: 18%;
+    right: 4%;
+    width: auto;
+    .btn-secondary {
+      padding: 8px;
+      border: none;
+      border-radius: 4px;
+      background-color: $primary-color-dark;
+      color: $primary-color-light;
+      text-transform: uppercase;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+    .btn-secondary:hover {
+      background-color: $primary-color;
+      color: #fff;
+    }
+    .friend-btn {
+      margin: 10px 0 20px;
+      display: flex;
+      flex-flow: row;
+      justify-content: space-around;
+      width: 100%;
+      width: 100%;
+      .btn-secondary {
+        padding: 8px;
+        border: none;
+        border-radius: 4px;
+        background-color: $primary-color-dark;
+        color: $primary-color-light;
+        text-transform: uppercase;
+        font-weight: 900;
+      }
+      .btn-secondary:hover {
+        background-color: $primary-color;
+        color: #fff;
+      }
+    }
+  }
 }
 
 .notice,
@@ -291,6 +336,21 @@ form {
     margin-bottom: 16px;
     text-transform: capitalize;
     font-size: 1.2em;
+    .btn-secondary {
+      padding: 8px;
+      width: 50%;
+      border: none;
+      border-radius: 4px;
+      background-color: $primary-color-dark;
+      color: $primary-color-light;
+      text-transform: uppercase;
+      font-weight: 900;
+      margin-right: 10px;
+    }
+    .btn-secondary:hover {
+      background-color: $primary-color;
+      color: #fff;
+    }
   }
 
   .profile-link {
