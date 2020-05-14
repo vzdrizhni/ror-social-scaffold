@@ -4,12 +4,15 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable
 
   validates :name, presence: true, length: { maximum: 20 }
+  validates :email, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP }, uniqueness: true
+  validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
   has_many :posts
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
   has_many :friendships
   has_many :inverse_friendships, class_name: 'Friendship', foreign_key: 'friend_id'
+
 
   def friends
     friends_array = friendships.map { |friendship| friendship.friend if friendship.confirmed }
