@@ -1,12 +1,11 @@
 require 'rails_helper'
 
-RSpec.describe User, type: :model do
+RSpec.describe 'User model', type: :model do
   before :each do
     User.create(name: 'huihui', email: 'huihui@huihui.com', password: "caposcapos", password_confirmation: "caposcapos")
   end
 
   describe '#name' do
-
     it 'doesnt take user without the name' do
       user = User.new
       user.name = nil
