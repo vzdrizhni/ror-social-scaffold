@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'User creates a new registered user', type: :feature do
+RSpec.describe 'Comments controller', type: :feature do
   before(:each) do
     @user = User.new(name: 'exampleUser1',
                      email: 'example1@example.com',
@@ -9,13 +9,13 @@ RSpec.describe 'User creates a new registered user', type: :feature do
     @user.save
   end
 
-  scenario 'they access the home page and click the signin button' do
+  scenario 'user page comments' do
     visit new_user_session_path
 
     fill_in 'user[email]', with: 'example1@example.com'
     fill_in 'user[password]', with: 'password'
 
-    click_button 'Sign In'
+    click_button 'Log in'
 
     fill_in 'post[content]', with: 'post Test'
 
