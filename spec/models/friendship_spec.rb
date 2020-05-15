@@ -3,9 +3,9 @@ require 'rails_helper'
 RSpec.describe Friendship, type: :model do
   before :each do
     @requester = User.create(name: 'test1', email: 'test1@test.com',
-                      password: '123456')
+                             password: '123456')
     @requestee = User.create(name: 'test2', email: 'test2@test.com',
-                        password: '123456')
+                             password: '123456')
   end
 
   describe 'associations' do
