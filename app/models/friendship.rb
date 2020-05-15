@@ -3,7 +3,7 @@ class Friendship < ApplicationRecord
   belongs_to :friend, class_name: 'User'
 
   validates_presence_of :user_id, :friend_id
-  validates_uniqueness_of :user, scope: :friend
+  validates_uniqueness_of :user, scope: :friend_id, allow_nil: true
   validate :disallow_self_friendship
   validate :duplicate_check
 
