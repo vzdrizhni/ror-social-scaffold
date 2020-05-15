@@ -4,7 +4,6 @@ class Friendship < ApplicationRecord
 
   validates_presence_of :user_id, :friend_id
   validates_uniqueness_of :user, scope: :friend
-  validates_uniqueness_of :friend, scope: :user
   validate :disallow_self_friendship
   validate :duplicate_check
 

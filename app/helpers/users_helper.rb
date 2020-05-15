@@ -6,6 +6,14 @@ module UsersHelper
       (link_to 'Reject', unfriend_user_path(friend), method: :delete, class: 'reject btn btn-secondary profile-link')
   end
 
+  def confirm_friendship_button(user)
+    if current_user.friend_requests.any?(user)
+      confirm_button(user)
+    else
+      friendship_button(user)
+    end
+  end
+
   # rubocop:disable Metrics/PerceivedComplexity
   def friendship_button_show(friend)
     if current_user != @user && current_user.friend_requests.none?(@user)

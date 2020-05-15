@@ -20,8 +20,6 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: alex
-  password: <%= ENV['RUNNER_CAPSTONE_DATABASE_PASSWORD'] %>
 
 development:
   <<: *default
@@ -31,19 +29,15 @@ development:
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  username: postgres
 
   # The password associated with the postgres role (username).
-  password: 1
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
   # domain sockets, so uncomment these lines.
-  host: localhost
 
   # The TCP port the server listens on. Defaults to 5432.
   # If your server runs on a different port number, change accordingly.
-  port: 5432
 
   # Schema search path. The server defaults to $user,public
   #schema_search_path: myapp,sharedapp,public
@@ -83,5 +77,3 @@ test:
 production:
   <<: *default
   database: ror_social_scaffold_production
-  username: ror_social_scaffold
-  password: <%= ENV['ROR_SOCIAL_SCAFFOLD_DATABASE_PASSWORD'] %>
