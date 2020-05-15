@@ -1,5 +1,4 @@
 class FriendshipsController < ApplicationController
-
   def index
     @friends = current_user.friendships.all
   end
@@ -7,11 +6,10 @@ class FriendshipsController < ApplicationController
   def create
     @friendship = current_user.friendships.build(friend_id: params[:id], confirmed: false)
     if @friendship.save
-      redirect_to user_path, notice: 'Friendship request sent!'
+      redirect_to users_path, notice: 'Friendship request sent!'
     else
       redirect_to users_path, alert: 'Friendship Already Sent!'
     end
-
   end
 
   def destroy
@@ -23,9 +21,4 @@ class FriendshipsController < ApplicationController
       redirect_to root_path, alert: 'You are not allowed to do this'
     end
   end
-
-  #def friendship_params
-   # params.fetch(:friendship).permit(:user_id, :friend_id, :confirmed)
-  #end
-
 end

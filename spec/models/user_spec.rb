@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'User model', type: :model do
   before :each do
-    User.create(name: 'huihui', email: 'huihui@huihui.com', password: "caposcapos", password_confirmation: "caposcapos")
+    User.create(name: 'huihui', email: 'huihui@huihui.com', password: 'caposcapos', password_confirmation: 'caposcapos')
   end
 
   describe '#name' do
@@ -43,7 +43,7 @@ RSpec.describe 'User model', type: :model do
       expect(user.errors[:email]).to_not include('is invalid')
     end
 
-  it 'validates email uniquness' do
+    it 'validates email uniquness' do
       user = User.new
       user.name = 'huihui'
       user.email = 'huihui@huihui.com'
@@ -90,7 +90,7 @@ RSpec.describe 'User model', type: :model do
       user.email = 'huihui12@huihui.com'
       user.password = ''
       user.valid?
-      expect(user.errors[:password]).to include("is too short (minimum is 6 characters)")
+      expect(user.errors[:password]).to include('is too short (minimum is 6 characters)')
 
       user.password = '123456'
       expect(user.valid?).to eql(true)
