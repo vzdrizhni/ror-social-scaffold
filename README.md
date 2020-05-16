@@ -63,7 +63,19 @@ TBA
 
 ## Authors
 
-TBA
+👤 **Roman Nikolaev**
+
+- LinkedIn: [Roman Nikolaev](https://www.linkedin.com/in/roman-nikolaev-65b639197/) -
+- GitHub: [@vzdrizhni](https://github.com/vzdrizhni)
+- E-mail: vzdrizhni@gmail.com
+
+👤 **Alexandru Bangau**
+
+- LinkedIn: [Alexandru Bangau](https://www.linkedin.com/in/alexandru-bangau/)
+- GitHub: [@rammazzoti2000](https://github.com/rammazzoti2000)
+- E-mail: bangau.alexandru@gmail.com
+
+
 
 ## 🤝 Contributing
 

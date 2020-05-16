@@ -15,7 +15,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
-gem 'wdm', '>= 0.1.0'
+# gem 'wdm', '>= 0.1.0'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -42,10 +42,13 @@ gem 'devise'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  # gem 'sqlite3'
+  gem 'rspec-rails'
 end
 
 group :test do
-  gem 'rspec'
+  gem 'capybara'
+  gem 'shoulda-matchers'
 end
 
 group :development do
@@ -60,3 +63,7 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+
+# group :production do
+#   gem 'pg'
+# end
