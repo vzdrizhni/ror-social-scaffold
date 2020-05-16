@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   validates :name, presence: true, length: { maximum: 20 }
   validates :email, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP }, uniqueness: true
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
+  scope :all_except_current, ->(user) { where.not(id: user) }
 
   has_many :posts
   has_many :comments, dependent: :destroy

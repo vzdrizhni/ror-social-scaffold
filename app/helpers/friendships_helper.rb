@@ -6,7 +6,8 @@ module FriendshipsHelper
       link_to 'Add friend', request_friendship_user_path(friend.id), method: :post,
                                                                      class: 'profile-link btn btn-secondary'
     else
-      link_to 'Unfriend', unfriend_user_path(friend), method: :delete, class: 'profile-link btn btn-secondary'
+      link_to 'Unfriend', unfriend_user_path(friend), method: :delete,
+                                                      class: 'profile-link btn btn-secondary'
     end
   end
 end

@@ -3,7 +3,7 @@ class Friendship < ApplicationRecord
   belongs_to :friend, class_name: 'User'
 
   validates_presence_of :user_id, :friend_id
-  validates_uniqueness_of :user, scope: :friend_id, allow_nil: true
+  validates_uniqueness_of :user, scope: :friend_id
   validate :disallow_self_friendship
   validate :duplicate_check
 
@@ -17,5 +17,9 @@ class Friendship < ApplicationRecord
                                                                                    friend_id: friend_id).exists?
 
     errors.add(:user_id, 'Already friends!')
+  end
+
+  def accept
+    update_attribute(:confirmed, true)
   end
 end
