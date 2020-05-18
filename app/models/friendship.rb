@@ -21,8 +21,4 @@ class Friendship < ApplicationRecord
 
     errors.add(:user_id, 'Already friends!')
   end
-
-  def accept
-    update_attribute(:confirmed, true)
-  end
 end
