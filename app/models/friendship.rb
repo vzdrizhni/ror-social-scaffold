@@ -2,6 +2,9 @@ class Friendship < ApplicationRecord
   belongs_to :user
   belongs_to :friend, class_name: 'User'
 
+  has_many :confirmed_friends, through: :friendships, source: :friend
+  has_many :inverse_friends, through: :friendships, source: :user
+
   validates_presence_of :user_id, :friend_id
   validates_uniqueness_of :user, scope: :friend_id
   validate :disallow_self_friendship
