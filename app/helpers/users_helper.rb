@@ -1,6 +1,5 @@
 module UsersHelper
   def confirm_button(friend)
-    return unless current_user.friend_requests
 
     (link_to 'Accept', hui_user_path(friend), method: :put, class: 'accept btn btn-secondary profile-link') <<
       (link_to 'Reject', unfriend_user_path(friend), method: :delete, class: 'reject btn btn-secondary profile-link')
