@@ -6,7 +6,7 @@ class Friendship < ApplicationRecord
   has_many :inverse_friends, through: :friendships, source: :user
 
   has_many :pending_friendships, through: :friendships, source: :friend
-  has_many :pending_friends, through: :friendships, source: :user
+  has_m
 
   validates_presence_of :user_id, :friend_id
   validates_uniqueness_of :user_id, scope: :friend_id
