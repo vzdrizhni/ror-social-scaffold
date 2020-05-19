@@ -11,7 +11,7 @@ class Friendship < ApplicationRecord
   validates_presence_of :user_id, :friend_id
   validates_uniqueness_of :user_id, scope: :friend_id
   validate :disallow_self_friendship
-  validate :duplicate_check
+  validate :duplicate_check 
 
   def disallow_self_friendship
     errors.add(:friend_id, "Can't friend yourself") if user_id == friend_id
