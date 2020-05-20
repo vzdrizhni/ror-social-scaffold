@@ -30,7 +30,7 @@ RSpec.describe 'Managing friendship:', type: :feature do
   scenario 'add friend' do
     click_on 'Add friend'
     expect(page).to have_content('Friendship request sent!')
-    expect(page).to have_content('Pending request')
+    expect(page).to have_content('Cancel Request')
   end
 
   scenario 'accept request' do
@@ -43,7 +43,7 @@ RSpec.describe 'Managing friendship:', type: :feature do
     visit users_path
     click_on 'Accept'
     expect(page).to have_content('U are now friends')
-    expect(page).to have_content('Unfriend')
+    expect(page).to have_content('Remove friend')
   end
 
   scenario 'reject request' do
@@ -55,7 +55,7 @@ RSpec.describe 'Managing friendship:', type: :feature do
     click_button 'Log in'
     visit users_path
     click_on 'Reject'
-    expect(page).to have_content('Friend removed')
+    expect(page).to have_content('Friendship request rejected')
     expect(page).to have_content('Add friend')
   end
 
@@ -69,7 +69,7 @@ RSpec.describe 'Managing friendship:', type: :feature do
     visit users_path
     click_on 'Accept'
     expect(page).to have_content('U are now friends')
-    click_on 'Unfriend'
+    click_on 'Remove friend'
     expect(page).to have_content('Friend removed')
   end
 end
