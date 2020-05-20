@@ -15,12 +15,7 @@ class FriendshipsController < ApplicationController
   def destroy
     @friendship = current_user.confirmed_friendships.find_by(friend_id: params[:id])
     @friendship.destroy_duplicates
-    # if @friendship # must be fixed
-    #   @friendship.destroy
     redirect_to users_path, notice: 'Friend removed'
-    # else
-    #   redirect_to root_path, alert: 'You are not allowed to do this'
-    # end
   end
 
   def reject
@@ -34,10 +29,4 @@ class FriendshipsController < ApplicationController
     @friendship.destroy
     redirect_to users_path, notice: 'Friendship request canceled'
   end
-
-  # def hui
-  #   @user = User.find(params[:id])
-  #   current_user.confirm_friend(@user)
-  #   redirect_to users_path, notice: 'U are now friends'
-  # end
 end

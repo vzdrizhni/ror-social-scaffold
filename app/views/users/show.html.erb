@@ -1,6 +1,7 @@
 <aside class="friends">
-  <%= render 'users/pending'%>
-  <%= friendship_button(@user) %>
+  <% if @user != current_user %>
+    <%= friendship_button(@user) %>
+  <% end %>
 </aside>
 <section class="user-section">
   <h2><%= "Name: #{@user.name}" %></h2>

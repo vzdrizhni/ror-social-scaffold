@@ -1,8 +1,0 @@
-<% @pending_request.each do |p| %>
-  <% if @user == current_user %>
-    <%= p.user.name.capitalize %> wants to be your friend
-    <div class="friend-btn">
-      <%= confirm_button(@user) %>
-    </div>
-  <% end %>
-<% end %>
