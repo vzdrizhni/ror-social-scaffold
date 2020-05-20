@@ -1,7 +1,6 @@
 <aside class="friends">
   <%= render 'users/pending'%>
-  <%= friendship_button_show(@user) %>
-  
+  <%= friendship_button(@user) %>
 </aside>
 <section class="user-section">
   <h2><%= "Name: #{@user.name}" %></h2>
