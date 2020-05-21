@@ -2,13 +2,9 @@ require 'rails_helper'
 require 'capybara/rails'
 
 RSpec.describe 'Managing friendship:', type: :feature do
-  before(:each) do
-    @user = User.new(name: 'huihui',
-                     email: 'huihui@huihui.com',
-                     password: 'caposcapos',
-                     password_confirmation: 'caposcapos')
-    @user.save
+  let(:user) { create(:user) }
 
+  before(:each) do
     @friend = User.new(name: 'caposcapos',
                        email: 'caposcapos@caposcapos.com',
                        password: 'caposcapos',
@@ -17,8 +13,8 @@ RSpec.describe 'Managing friendship:', type: :feature do
 
     visit new_user_session_path
 
-    fill_in 'user[email]', with: 'huihui@huihui.com'
-    fill_in 'user[password]', with: 'caposcapos'
+    fill_in 'user[email]', with: user.email
+    fill_in 'user[password]', with: user.password
 
     click_button 'Log in'
 
