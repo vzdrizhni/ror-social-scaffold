@@ -14,6 +14,10 @@
     Recent posts
   </h3>
   <ul class="posts">
-    <%= render @timeline_posts %>
+    <% if @timeline_posts %>
+      <%= render @timeline_posts %>
+    <% else %>
+      <%=  redirect_to posts_path %>
+    <% end %>
   </ul>
 </article>

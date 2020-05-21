@@ -17,6 +17,5 @@ RSpec.describe Friendship, type: :model do
     subject { Friendship.create(user_id: @requester.id, friend_id: @requestee.id, confirmed: false) }
     it { should validate_presence_of(:friend_id) }
     it { should validate_presence_of(:user_id) }
-    it { should validate_uniqueness_of(:user).scoped_to(:friend_id).ignoring_case_sensitivity }
   end
 end

@@ -2,13 +2,9 @@ require 'rails_helper'
 require 'capybara/rails'
 
 RSpec.describe 'Managing friendship:', type: :feature do
-  before(:each) do
-    @user = User.new(name: 'huihui',
-                     email: 'huihui@huihui.com',
-                     password: 'caposcapos',
-                     password_confirmation: 'caposcapos')
-    @user.save
+  let(:user) { create(:user) }
 
+  before(:each) do
     @friend = User.new(name: 'caposcapos',
                        email: 'caposcapos@caposcapos.com',
                        password: 'caposcapos',
@@ -17,8 +13,8 @@ RSpec.describe 'Managing friendship:', type: :feature do
 
     visit new_user_session_path
 
-    fill_in 'user[email]', with: 'huihui@huihui.com'
-    fill_in 'user[password]', with: 'caposcapos'
+    fill_in 'user[email]', with: user.email
+    fill_in 'user[password]', with: user.password
 
     click_button 'Log in'
 
@@ -30,7 +26,7 @@ RSpec.describe 'Managing friendship:', type: :feature do
   scenario 'add friend' do
     click_on 'Add friend'
     expect(page).to have_content('Friendship request sent!')
-    expect(page).to have_content('Pending request')
+    expect(page).to have_content('Cancel Request')
   end
 
   scenario 'accept request' do
@@ -43,7 +39,7 @@ RSpec.describe 'Managing friendship:', type: :feature do
     visit users_path
     click_on 'Accept'
     expect(page).to have_content('U are now friends')
-    expect(page).to have_content('Unfriend')
+    expect(page).to have_content('Remove friend')
   end
 
   scenario 'reject request' do
@@ -55,7 +51,7 @@ RSpec.describe 'Managing friendship:', type: :feature do
     click_button 'Log in'
     visit users_path
     click_on 'Reject'
-    expect(page).to have_content('Friend removed')
+    expect(page).to have_content('Friendship request rejected')
     expect(page).to have_content('Add friend')
   end
 
@@ -69,7 +65,7 @@ RSpec.describe 'Managing friendship:', type: :feature do
     visit users_path
     click_on 'Accept'
     expect(page).to have_content('U are now friends')
-    click_on 'Unfriend'
+    click_on 'Remove friend'
     expect(page).to have_content('Friend removed')
   end
 end

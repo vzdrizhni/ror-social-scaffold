@@ -48,7 +48,6 @@ Layout/ExtraSpacing:
 Layout/MultilineMethodCallIndentation:
   Enabled: true
   EnforcedStyle: indented
-
 Lint/RaiseException:
   Enabled: false
 Lint/StructNewOverride:
