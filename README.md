@@ -2,6 +2,8 @@
 
 > This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
 
+![Screenshot](app/assets/images/screenshot.png)
+
 ## Built With
 
 - Ruby v2.7.0
@@ -9,8 +11,7 @@
 
 ## Live Demo
 
-TBA
-
+[Live demo link](https://pure-oasis-59574.herokuapp.com/)
 
 ## Getting Started
 
@@ -52,18 +53,30 @@ Open `http://localhost:3000/` in your browser.
 ### Run tests
 
 ```
-    rpsec --format documentation
+    $ bundle exec rpsec
 ```
 
 > Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
 
 ### Deployment
 
-TBA
+[Heroku](https://pure-oasis-59574.herokuapp.com/)
 
 ## Authors
 
-TBA
+👤 **Roman Nikolaev**
+
+- LinkedIn: [Roman Nikolaev](https://www.linkedin.com/in/roman-nikolaev-65b639197/) -
+- GitHub: [@vzdrizhni](https://github.com/vzdrizhni)
+- E-mail: vzdrizhni@gmail.com
+
+👤 **Alexandru Bangau**
+
+- LinkedIn: [Alexandru Bangau](https://www.linkedin.com/in/alexandru-bangau/)
+- GitHub: [@rammazzoti2000](https://github.com/rammazzoti2000)
+- E-mail: bangau.alexandru@gmail.com
+
+
 
 ## 🤝 Contributing
 
@@ -77,9 +90,11 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-TBA
+* [Microverse](https://www.microverse.org/)
+* [Ruby on rails](https://rubyonrails.org/)
+* [Heroku](https://heroku.com/)
 
 ## 📝 License
 
-TBA
+[MIT](https://opensource.org/licenses/MIT)
 
