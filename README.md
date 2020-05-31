@@ -11,7 +11,7 @@
 
 ## Live Demo
 
-[Live demo link](https://damp-island-90609.herokuapp.com/)
+[Live demo link](https://pure-oasis-59574.herokuapp.com/)
 
 ## Getting Started
 
