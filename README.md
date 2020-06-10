@@ -2,6 +2,8 @@
 
 > This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
 
+![Screenshot](app/assets/images/screenshot.png)
+
 ## Built With
 
 - Ruby v2.7.0
@@ -9,8 +11,7 @@
 
 ## Live Demo
 
-TBA
-
+[Live demo link](https://pure-oasis-59574.herokuapp.com/)
 
 ## Getting Started
 
@@ -59,7 +60,7 @@ Open `http://localhost:3000/` in your browser.
 
 ### Deployment
 
-TBA
+[Heroku](https://pure-oasis-59574.herokuapp.com/)
 
 ## Authors
 
@@ -89,9 +90,11 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-TBA
+* [Microverse](https://www.microverse.org/)
+* [Ruby on rails](https://rubyonrails.org/)
+* [Heroku](https://heroku.com/)
 
 ## 📝 License
 
-TBA
+[MIT](https://opensource.org/licenses/MIT)
 
