@@ -1,17 +1,25 @@
 # Scaffold for social media app with Ruby on Rails
 
-> This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
+> This project is based on facebook and already included the MVC for users, posts comments, posts likes and dislikes we added functionality for Friendships, Unit and integration tests and Omniauth authentication as an extra.
 
 ![Screenshot](app/assets/images/screenshot.png)
+
+This is the final Microverse project of the Ruby on Rails Curriculum
 
 ## Built With
 
 - Ruby v2.7.0
 - Ruby on Rails v5.2.4
+- Rspec
+- Capybara
+- Stickler
+- Atom :atom:
 
 ## Live Demo
 
 [Live demo link](https://pure-oasis-59574.herokuapp.com/)
+
+```Start using the webapp by singin up```
 
 ## Getting Started
 
@@ -56,8 +64,6 @@ Open `http://localhost:3000/` in your browser.
     $ bundle exec rpsec
 ```
 
-> Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
-
 ### Deployment
 
 [Heroku](https://pure-oasis-59574.herokuapp.com/)
@@ -78,15 +84,15 @@ Open `http://localhost:3000/` in your browser.
 
 
 
-## 🤝 Contributing
+## :handshake: Contributing
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/microverseinc/ror-social-scaffold/issues).
 
 ## Show your support
 
-Give a ⭐️ if you like this project!
+Give a :star: if you like this project!
 
 ## Acknowledgments
 
